@@ -6,10 +6,11 @@
     <bean id="exporter" class="org.springframework.jmx.export.MBeanExporter" lazy-init="false">
         <property name="beans">
             <map>
-                <entry key="lester:name=add" value-ref="rvp"/>
+                <entry key="lester:name=add" value-ref="add"/>
             </map>
         </property>
+        <property name="registrationBehaviorName" value="REGISTRATION_REPLACE_EXISTING"/>
     </bean>
 
-    <bean id="rvp" class="org.adscale.ReversePolishNotation"/>
+    <bean id="add" class="org.adscale.Add"/>
 </beans>
