@@ -16,7 +16,7 @@ public class AppTest {
     @Test
     public void testName() throws Exception {
         WebClient webClient = new WebClient();
-        Page page = webClient.getPage("http://localhost:8080/lester/helloGroovlet.groovy");
+        Page page = webClient.getPage("http://localhost:8080/lester-engine/helloGroovlet.groovy");
         assertEquals(true, page.isHtmlPage());
     }
 }
