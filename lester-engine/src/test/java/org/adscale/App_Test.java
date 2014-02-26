@@ -9,14 +9,27 @@ import org.junit.Test;
 
 public class App_Test {
 
+    public static final String DOMAIN = "http://localhost:8080/";
+
+    public static final String LESTER_ADD = DOMAIN + "lester-add/add?";
+
     WebClient webClient = new WebClient();
 
     @Test
     public void sum() throws Exception {
-        String i1 = 2 + "";
-        String i2 = 7 + "";
-        Page page = webClient.getPage("http://localhost:8080/lester-add/add?i=" + i1 + "&i=" + i2);
+        int i1 = 2;
+        String s1 = i1 + "";
+        int i2 = 7;
+        String s2 = i2 + "";
+        Page page = webClient.getPage(LESTER_ADD + "i=" + s1 + "&i=" + s2);
         String sum = page.getWebResponse().getContentAsString();
-        assertEquals(9 + "", sum);
+        assertEquals(i1 + i2 + "", sum);
+    }
+
+
+    @Test
+    public void reversePolishNotation() throws Exception {
+
+
     }
 }

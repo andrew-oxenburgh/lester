@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.adscale</groupId>
-	<artifactId>lester-add</artifactId>
+	<artifactId>lester-front-end</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<properties>
@@ -41,7 +41,7 @@
             <artifactId>lester-engine</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-	</dependencies>
+    </dependencies>
 	<build>
 		<plugins>
 			<plugin>
@@ -51,8 +51,8 @@
 				<configuration>
 					<scanIntervalSeconds>5</scanIntervalSeconds>
 					<stopKey>foo</stopKey>
-					<stopPort>9100</stopPort>
-				</configuration>
+					<stopPort>9101</stopPort>
+                </configuration>
 				<executions>
 					<execution>
 						<id>start-jetty</id>
