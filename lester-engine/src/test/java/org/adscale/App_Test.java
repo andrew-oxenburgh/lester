@@ -8,19 +8,14 @@ import org.junit.Test;
 
 public class App_Test {
 
-    public static final String DOMAIN = "http://localhost:8090/";
-
-    public static final String LESTER_ADD = DOMAIN + "lester-front-end/calc?";
-
     WebClient webClient = new WebClient();
-
 
     @Test
     public void sum() throws Exception {
-        String url = LESTER_ADD + "calc=1,2,plus";
+        String url = "http://localhost:8090/lester-front-end/calc?calc=1,2,7,plus";
         System.out.println("url = " + url);
         Page page = webClient.getPage(url);
         String sum = page.getWebResponse().getContentAsString();
-        assertEquals(1 + 2 + "", sum);
+        assertEquals(1 + 2 + 7 + "", sum);
     }
 }

@@ -1,9 +1,11 @@
 package org.adscale;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class ReversePolishNotation {
+
+    private Add add;
+
 
     public int reversePolishNotation(String formula) {
 
@@ -21,11 +23,13 @@ public class ReversePolishNotation {
 
         if (parts[parts.length - 1].equals("plus")) {
             parts = Arrays.copyOf(parts, parts.length - 1);
-            return new Add().add(stringToInts(parts));
+            add = new Add();
+            return add.add(stringToInts(parts));
         }
 
         return -1;
     }
+
 
     public int[] stringToInts(String[] input) {
         int[] ints = new int[input.length];
@@ -35,5 +39,15 @@ public class ReversePolishNotation {
         }
         return ints;
     }
+
+    public Add getAdd() {
+        return add;
+    }
+
+
+    public void setAdd(Add add) {
+        this.add = add;
+    }
+
 
 }

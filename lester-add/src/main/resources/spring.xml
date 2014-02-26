@@ -9,8 +9,8 @@
                 <entry key="lester:name=add" value-ref="add"/>
             </map>
         </property>
-        <property name="registrationBehaviorName" value="REGISTRATION_REPLACE_EXISTING"/>
     </bean>
 
     <bean id="add" class="org.adscale.Add"/>
+
 </beans>
