@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class ReversePolishNotation {
 
-    private AddI add ;
+    private AddI add = new Add();
 
 
     public int reversePolishNotation(String formula) {
