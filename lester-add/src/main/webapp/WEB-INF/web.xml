@@ -11,6 +11,18 @@
     </listener>
 
     <servlet>
+        <servlet-name>remoting</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>remoting</servlet-name>
+        <url-pattern>/remoting/*</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
         <servlet-name>add</servlet-name>
         <servlet-class>org.adscale.lester_add.AddServlet</servlet-class>
     </servlet>

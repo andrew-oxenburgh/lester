@@ -4,12 +4,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
             http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd">
 
-   <bean id="rpn" class="org.adscale.ReversePolishNotation">
-        <property name="add" ref="add2"/>
-    </bean>
+    <bean id="addService" class="org.adscale.Add"/>
 
-    <bean id="add2" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
-        <property name="serviceUrl" value="http://localhost:8099/lester-add/remoting/AddService"/>
+    <bean name="/AddService" class="org.springframework.remoting.caucho.HessianServiceExporter">
+        <property name="service" ref="addService"/>
         <property name="serviceInterface" value="org.adscale.AddI"/>
     </bean>
 

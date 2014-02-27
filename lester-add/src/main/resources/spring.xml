@@ -3,6 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
             http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
     <bean id="exporter" class="org.springframework.jmx.export.MBeanExporter" lazy-init="false">
         <property name="beans">
             <map>
@@ -12,5 +13,11 @@
     </bean>
 
     <bean id="add" class="org.adscale.Add"/>
+
+    <!--<bean name="accountExporter" class="org.springframework.remoting.caucho.HessianServiceExporter">-->
+        <!--<property name="service" ref="add"/>-->
+        <!--<property name="serviceInterface" value="org.adscale.AddI"/>-->
+    <!--</bean>-->
+
 
 </beans>

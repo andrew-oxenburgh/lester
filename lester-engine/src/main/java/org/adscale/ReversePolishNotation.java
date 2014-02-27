@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class ReversePolishNotation {
 
-    private Add add;
+    private AddI add ;
 
 
     public int reversePolishNotation(String formula) {
@@ -23,7 +23,6 @@ public class ReversePolishNotation {
 
         if (parts[parts.length - 1].equals("plus")) {
             parts = Arrays.copyOf(parts, parts.length - 1);
-            add = new Add();
             return add.add(stringToInts(parts));
         }
 
@@ -40,14 +39,14 @@ public class ReversePolishNotation {
         return ints;
     }
 
-    public Add getAdd() {
+
+    public AddI getAdd() {
         return add;
     }
 
 
-    public void setAdd(Add add) {
+    public void setAdd(AddI add) {
         this.add = add;
     }
-
 
 }
