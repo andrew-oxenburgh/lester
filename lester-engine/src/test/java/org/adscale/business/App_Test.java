@@ -1,4 +1,4 @@
-package org.adscale;
+package org.adscale.business;
 
 import static org.junit.Assert.assertEquals;
 
@@ -14,7 +14,7 @@ public class App_Test {
     @Test
     @Ignore
     public void sum() throws Exception {
-        String url = "http://localhost:8090/lester-front-end/calc?calc=1,2,7,plus";
+        String url = "http://localhost:8090/lester-calc/calc?calc=1,2,7,plus";
         System.out.println("url = " + url);
         Page page = webClient.getPage(url);
         String sum = page.getWebResponse().getContentAsString();

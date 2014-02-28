@@ -11,7 +11,7 @@
 	</properties>
     <modules>
         <module>lester-engine</module>
-        <module>lester-front-end</module>
+        <module>lester-calc</module>
         <module>lester-add</module>
     </modules>
     <build>

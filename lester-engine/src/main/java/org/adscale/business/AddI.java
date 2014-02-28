@@ -1,4 +1,4 @@
-package org.adscale;
+package org.adscale.business;
 
 public interface AddI {
 

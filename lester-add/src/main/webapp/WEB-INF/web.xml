@@ -4,7 +4,7 @@
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:spring.xml</param-value>
+        <param-value>classpath:add-spring.xml</param-value>
     </context-param>
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
@@ -21,16 +21,4 @@
         <url-pattern>/remoting/*</url-pattern>
     </servlet-mapping>
 
-
-    <servlet>
-        <servlet-name>add</servlet-name>
-        <servlet-class>org.adscale.lester_add.AddServlet</servlet-class>
-    </servlet>
-	<servlet-mapping>
-		<servlet-name>add</servlet-name>
-		<url-pattern>/add</url-pattern>
-	</servlet-mapping>
-	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
-	</welcome-file-list>
 </web-app>

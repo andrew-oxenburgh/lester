@@ -1,4 +1,4 @@
-package org.adscale;
+package org.adscale.business;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 

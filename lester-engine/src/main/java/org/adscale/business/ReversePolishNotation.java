@@ -1,11 +1,13 @@
-package org.adscale;
+package org.adscale.business;
+
+import org.adscale.business.Add;
+import org.adscale.business.AddI;
 
 import java.util.Arrays;
 
 public class ReversePolishNotation {
 
-    private AddI add = new Add();
-
+    public AddI add = new Add();
 
     public int reversePolishNotation(String formula) {
 
@@ -30,7 +32,7 @@ public class ReversePolishNotation {
     }
 
 
-    public int[] stringToInts(String[] input) {
+    int[] stringToInts(String[] input) {
         int[] ints = new int[input.length];
 
         for (int i = 0; i < input.length; i++) {
@@ -38,7 +40,6 @@ public class ReversePolishNotation {
         }
         return ints;
     }
-
 
     public AddI getAdd() {
         return add;

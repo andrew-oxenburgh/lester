@@ -1,6 +1,8 @@
-package org.adscale;
+package org.adscale.business;
 
 import static org.junit.Assert.assertArrayEquals;
+
+import org.adscale.business.ReversePolishNotation;
 
 import org.junit.Test;
 
