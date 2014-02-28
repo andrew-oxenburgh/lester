@@ -12,7 +12,7 @@ public class App_Test {
     WebClient webClient = new WebClient();
 
     @Test
-    @Ignore
+//    @Ignore
     public void sum() throws Exception {
         String url = "http://localhost:8090/lester-calc/calc?calc=1,2,7,plus";
         System.out.println("url = " + url);
